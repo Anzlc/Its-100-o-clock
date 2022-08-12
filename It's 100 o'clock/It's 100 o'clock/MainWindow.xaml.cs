@@ -29,7 +29,7 @@ namespace It_s_100_o_clock
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
         }
@@ -37,10 +37,38 @@ namespace It_s_100_o_clock
 
         void timer_Tick(object sender, EventArgs e)
         {
-            dt = DateTime.Now;
-            ClockLabel.Content = dt.Second;
+            
+            ClockLabel.Content = ParseToString((int)(ToSeconds(DateTime.Now) * ConvertTo100));
+            
+            
         }
 
+        internal string ParseToString(int format100int)
+        {
+            string finish = "";
+            int toRemove = 0;
+            finish += format100int / 10000;
+            toRemove = format100int / 10000 * 10000;
+            format100int -= toRemove;
+            finish += ":";
+            finish += format100int / 100;
+            toRemove = format100int / 100 * 100;
+            format100int -= toRemove;
+            finish += ":";
+            finish += format100int;
+
+            return finish;
+
+        }
+
+
+        internal float ToSeconds(DateTime time)
+        { 
+            
+            return time.Hour * 3600f + time.Minute * 60f + time.Second + time.Millisecond * 0.001f;
+        }
+
+        
 
     }
 }
