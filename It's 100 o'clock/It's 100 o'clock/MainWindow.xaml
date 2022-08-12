@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:It_s_100_o_clock"
+        Loaded="Window_Loaded"
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+        
+        
     <Grid>
-
+        <Label FontSize="100" Name="ClockLabel" HorizontalAlignment="Center" VerticalAlignment="Center">wd</Label>
     </Grid>
 </Window>
