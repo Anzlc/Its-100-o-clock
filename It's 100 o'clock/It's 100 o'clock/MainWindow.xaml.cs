@@ -3,7 +3,9 @@ using System.Collections;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Threading;
+using It_s_100_o_clock.Pages;
 
 namespace It_s_100_o_clock
 {
@@ -16,46 +18,38 @@ namespace It_s_100_o_clock
     public partial class MainWindow : Window
     {
         public readonly float ConvertTo100 = 11.57407407407407f;
-        internal DateTime dt = DateTime.Now;
+        
+        internal readonly SolidColorBrush mouseOverColor = (SolidColorBrush)new BrushConverter().ConvertFrom("#33000000");
         internal DispatcherTimer timer = new DispatcherTimer();
         public MainWindow()
         {
             InitializeComponent();
-            ClockLabel.Content = dt.Second;
-            
-            
+            CompositionTarget.Rendering += Rendered_EventHandler;
+
+
+
         }
 
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Rendered_EventHandler(object sender, EventArgs e)
         {
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
-        }
-    
-
-        void timer_Tick(object sender, EventArgs e)
-        {
-            
             ClockLabel.Content = ParseToString((int)(ToSeconds(DateTime.Now) * ConvertTo100));
-            
-            
         }
+
+
+        
 
         internal string ParseToString(int format100int)
         {
             string finish = "";
-            int toRemove = 0;
-            finish += format100int / 10000;
-            toRemove = format100int / 10000 * 10000;
+            finish += (format100int / 10000).ToString("00");
+            int toRemove = format100int / 10000 * 10000;
             format100int -= toRemove;
             finish += ":";
-            finish += format100int / 100;
+            finish += (format100int / 100).ToString("00");
             toRemove = format100int / 100 * 100;
             format100int -= toRemove;
             finish += ":";
-            finish += format100int;
+            finish += format100int.ToString("00");
 
             return finish;
 
@@ -68,7 +62,14 @@ namespace It_s_100_o_clock
             return time.Hour * 3600f + time.Minute * 60f + time.Second + time.Millisecond * 0.001f;
         }
 
-        
+        private void ClockButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = null;
+        }
 
+        private void ConvertButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new ConvertScreen();
+        }
     }
 }

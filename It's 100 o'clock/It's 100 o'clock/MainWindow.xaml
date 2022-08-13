@@ -4,13 +4,71 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:It_s_100_o_clock"
-        Loaded="Window_Loaded"
         
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="It's 100 o'clock!" Height="450" Width="800">
+        <Window.Resources>
+            <FontFamily x:Key="7Digital" >/Fonts/#digital-7</FontFamily>
+        <SolidColorBrush x:Key="GrayForeground" Color="#FFB9B9B9"/>
         
-        
+    </Window.Resources>
     <Grid>
-        <Label FontSize="100" Name="ClockLabel" HorizontalAlignment="Center" VerticalAlignment="Center">wd</Label>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Click="ClockButton_Click" x:Name="ClockButton" MinHeight="40" MinWidth="40" BorderThickness="0" >
+                <Image Source="/Assets/Icons/clock.png" Width="25" Height="25"></Image>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                
+                                <Setter Property="Background" Value="#1C000000"></Setter>
+                            </Trigger>
+                            
+                        </Style.Triggers>
+                        
+                    </Style>
+                      
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5 0 0 5" MinHeight="40" MinWidth="40" Background="{TemplateBinding Background}" >
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Click="ConvertButton_Click"  x:Name="ConvertButton" MinHeight="40" MinWidth="40" BorderThickness="0" >
+                <Image Source="/Assets/Icons/switch.png" Width="25" Height="25"></Image>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background" Value="#1C000000"></Setter>
+                            </Trigger>
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="0 5 5 0" MinHeight="40" MinWidth="40" Background="{TemplateBinding Background}" >
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <Label Margin="0 40 0 0" FontSize="100" Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" Name="ClockLabel" HorizontalAlignment="Center" VerticalAlignment="Center">wd</Label>
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
     </Grid>
 </Window>
