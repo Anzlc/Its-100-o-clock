@@ -69,6 +69,6 @@
             </Button>
         </StackPanel>
         <Label Margin="0 40 0 0" FontSize="100" Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" Name="ClockLabel" HorizontalAlignment="Center" VerticalAlignment="Center">wd</Label>
-        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame"></Frame>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

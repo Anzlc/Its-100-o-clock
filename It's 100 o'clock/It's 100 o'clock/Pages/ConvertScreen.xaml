@@ -9,7 +9,8 @@
       
       Title="It's 100 o'clock!">
 
-    <Grid>
+    <Grid Margin="0 40 0 0">
         <Border Background="Aqua"></Border>
+        <Label>Hello</Label>
     </Grid>
 </Page>

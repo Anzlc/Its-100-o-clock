@@ -64,12 +64,20 @@ namespace It_s_100_o_clock
 
         private void ClockButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = null;
+            Main.Content = null;
         }
 
         private void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new ConvertScreen();
+            MessageBox.Show("Clicked");
+            ConvertScreen cs = new ConvertScreen();
+            MessageBox.Show("Created Class");
+            Main.Content = cs;
+            MessageBox.Show("Assigned Class");
+
+            
+            
+           
         }
     }
 }
