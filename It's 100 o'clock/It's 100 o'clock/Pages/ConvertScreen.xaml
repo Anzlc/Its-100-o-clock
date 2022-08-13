@@ -8,9 +8,48 @@
       d:DesignHeight="450" d:DesignWidth="800"
       
       Title="It's 100 o'clock!">
-
+    <Page.Resources>
+        <FontFamily x:Key="7Digital" >/Fonts/#digital-7</FontFamily>
+    </Page.Resources>
     <Grid Margin="0 40 0 0">
-        <Border Background="Aqua"></Border>
-        <Label>Hello</Label>
+        <Border Background="White"></Border>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.6" ScaleY="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+
+
+            <StackPanel Width="183" Orientation="Horizontal">
+                <TextBox BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
+
+                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+                <TextBox BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
+                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+
+                <TextBox BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
+
+            </StackPanel>
+            <Separator Opacity="0" Height="10"></Separator>
+            <StackPanel Width="183" Orientation="Horizontal">
+                <TextBox BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">23</TextBox>
+
+                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+                <TextBox BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">59</TextBox>
+                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+
+                <TextBox BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">59</TextBox>
+
+            </StackPanel>
+        </StackPanel>
+
+
+
+
     </Grid>
 </Page>

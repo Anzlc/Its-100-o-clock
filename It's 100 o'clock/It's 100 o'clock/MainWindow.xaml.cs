@@ -19,15 +19,15 @@ namespace It_s_100_o_clock
     {
         public readonly float ConvertTo100 = 11.57407407407407f;
         
-        internal readonly SolidColorBrush mouseOverColor = (SolidColorBrush)new BrushConverter().ConvertFrom("#33000000");
-        internal DispatcherTimer timer = new DispatcherTimer();
+        
+        ConvertScreen cs;
         public MainWindow()
         {
             InitializeComponent();
             CompositionTarget.Rendering += Rendered_EventHandler;
 
 
-
+            cs = new ConvertScreen();
         }
 
         private void Rendered_EventHandler(object sender, EventArgs e)
@@ -69,11 +69,11 @@ namespace It_s_100_o_clock
 
         private void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Clicked");
-            ConvertScreen cs = new ConvertScreen();
-            MessageBox.Show("Created Class");
+            
+            
+            
             Main.Content = cs;
-            MessageBox.Show("Assigned Class");
+            
 
             
             
