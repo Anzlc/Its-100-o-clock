@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Threading;
 using It_s_100_o_clock.Pages;
+using It_s_100_o_clock.Utils;
 
 namespace It_s_100_o_clock
 {
@@ -17,8 +18,8 @@ namespace It_s_100_o_clock
 
     public partial class MainWindow : Window
     {
-        public readonly float ConvertTo100 = 11.57407407407407f;
         
+        TimeConverter timeConverter;
         
         ConvertScreen cs;
         public MainWindow()
@@ -26,41 +27,19 @@ namespace It_s_100_o_clock
             InitializeComponent();
             CompositionTarget.Rendering += Rendered_EventHandler;
 
-
+            timeConverter = new TimeConverter();
             cs = new ConvertScreen();
         }
 
         private void Rendered_EventHandler(object sender, EventArgs e)
         {
-            ClockLabel.Content = ParseToString((int)(ToSeconds(DateTime.Now) * ConvertTo100));
+            ClockLabel.Content = timeConverter.ParseToString((int)(timeConverter.ToSeconds(DateTime.Now) * TimeConverter.ConvertTo100));
         }
 
 
         
 
-        internal string ParseToString(int format100int)
-        {
-            string finish = "";
-            finish += (format100int / 10000).ToString("00");
-            int toRemove = format100int / 10000 * 10000;
-            format100int -= toRemove;
-            finish += ":";
-            finish += (format100int / 100).ToString("00");
-            toRemove = format100int / 100 * 100;
-            format100int -= toRemove;
-            finish += ":";
-            finish += format100int.ToString("00");
-
-            return finish;
-
-        }
-
-
-        internal float ToSeconds(DateTime time)
-        { 
-            
-            return time.Hour * 3600f + time.Minute * 60f + time.Second + time.Millisecond * 0.001f;
-        }
+        
 
         private void ClockButton_Click(object sender, RoutedEventArgs e)
         {
