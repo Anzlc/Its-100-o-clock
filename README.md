@@ -1,5 +1,5 @@
 
-![Logo](Its-100-o-clock/It's 100 o'clock/It's 100 o'clock/Assets/Icons/its%20100%20oclock.png)
+![Logo](It's 100 o'clock/It's 100 o'clock/Assets/Icons/its%20100%20oclock.png)
 
 
 # It's 100 o'clock!
@@ -34,11 +34,11 @@ The application uses WPF (Windows Presentation Foundation) for UI, all of the ap
 
 ## Screenshots
 
-![App Screenshot](Its-100-o-clock/It's 100 o'clock/It's 100 o'clock/Assets/Images/Screenshot (174).png)
+![App Screenshot](It's 100 o'clock/It's 100 o'clock/Assets/Images/Screenshot (174).png)
 100h based clock.
 \
 \
-![App Screenshot](Its-100-o-clock/It's 100 o'clock/It's 100 o'clock/Assets/Images/Screenshot (173).png)
+![App Screenshot](It's 100 o'clock/It's 100 o'clock/Assets/Images/Screenshot (173).png)
 Time converter.
 
 
