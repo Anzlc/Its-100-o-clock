@@ -34,11 +34,11 @@ The application uses WPF (Windows Presentation Foundation) for UI, all of the ap
 
 ## Screenshots
 
-![App Screenshot](It's%20100%20o'clock/It's%20100%20o'clock/Assets/Images/Screenshot%20(174).png)
+![App Screenshot](It's%20100%20o'clock/It's%20100%20o'clock/Assets/Images/Screenshot%20(174).png)\
 100h based clock.
 \
 \
-![App Screenshot](It's%20100%20o'clock/It's%20100%20o'clock/Assets/Images/Screenshot%20(173).png)
+![App Screenshot](It's%20100%20o'clock/It's%20100%20o'clock/Assets/Images/Screenshot%20(173).png)\
 Time converter.
 
 
