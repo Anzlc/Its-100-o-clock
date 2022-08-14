@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:It_s_100_o_clock"
-        
+        Icon="/Assets/Icons/its100oclock.ico"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="It's 100 o'clock!" Height="450" Width="800">
@@ -68,7 +68,18 @@
                 </Button.Template>
             </Button>
         </StackPanel>
-        <Label Margin="0 40 0 0" FontSize="100" Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" Name="ClockLabel" HorizontalAlignment="Center" VerticalAlignment="Center">wd</Label>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="327"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            
+            
+            <Label Grid.Column="1"  Margin="0 40 0 0" VerticalAlignment="Center" FontSize="100" Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" Name="ClockLabel">54:40:55</Label>
+            
+        </Grid>
         <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
