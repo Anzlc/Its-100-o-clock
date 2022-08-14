@@ -9,12 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Icons\base 100.png" />
+    <None Remove="Assets\Icons\base24.png" />
     <None Remove="Assets\Icons\clock.png" />
     <None Remove="Assets\Icons\switch.png" />
     <None Remove="Fonts\digital-7.ttf" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Icons\base 100.png" />
+    <Resource Include="Assets\Icons\base24.png" />
     <Resource Include="Assets\Icons\clock.png" />
     <Resource Include="Assets\Icons\switch.png" />
     <Resource Include="Fonts\digital-7.ttf" />

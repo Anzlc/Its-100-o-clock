@@ -10,6 +10,7 @@
       Title="It's 100 o'clock!">
     <Page.Resources>
         <FontFamily x:Key="7Digital" >/Fonts/#digital-7</FontFamily>
+        <SolidColorBrush x:Key="GrayForeground" Color="#FFB9B9B9"/>
     </Page.Resources>
     <Grid Margin="0 40 0 0">
         <Border Background="White"></Border>
@@ -25,25 +26,26 @@
             </StackPanel.RenderTransform>
 
 
-            <StackPanel Width="183" Orientation="Horizontal">
-                <TextBox TextChanged="Convert_TextChanged"  x:Name="Hour100" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
+            <StackPanel Width="246" Margin="64 0 0 0" Orientation="Horizontal">
+                <TextBox CaretBrush="{DynamicResource GrayForeground}" Foreground="{DynamicResource GrayForeground}" TextChanged="Convert_TextChanged"  x:Name="Hour100" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
 
-                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
-                <TextBox TextChanged="Convert_TextChanged" x:Name="Minute100" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
-                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+                <Label Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+                <TextBox CaretBrush="{DynamicResource GrayForeground}" Foreground="{DynamicResource GrayForeground}" TextChanged="Convert_TextChanged" x:Name="Minute100" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
+                <Label Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
 
-                <TextBox TextChanged="Convert_TextChanged" x:Name="Second100" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
-
+                <TextBox CaretBrush="{DynamicResource GrayForeground}" Foreground="{DynamicResource GrayForeground}" TextChanged="Convert_TextChanged" x:Name="Second100" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">99</TextBox>
+                <Image Source="/Assets/Icons/base 100.png" ></Image>
             </StackPanel>
             <Separator Opacity="0" Height="10"></Separator>
-            <StackPanel Width="183" Orientation="Horizontal">
-                <TextBox TextChanged="Convert_TextChanged" x:Name="Hour24" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">23</TextBox>
+            <StackPanel Width="246" Margin="64 0 0 0" Orientation="Horizontal">
+                <TextBox CaretBrush="{DynamicResource GrayForeground}" Foreground="{DynamicResource GrayForeground}" TextChanged="Convert_TextChanged" x:Name="Hour24" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">23</TextBox>
 
-                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
-                <TextBox TextChanged="Convert_TextChanged" x:Name="Minute24" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">59</TextBox>
-                <Label FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+                <Label Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
+                <TextBox CaretBrush="{DynamicResource GrayForeground}" Foreground="{DynamicResource GrayForeground}" TextChanged="Convert_TextChanged" x:Name="Minute24" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">59</TextBox>
+                <Label Foreground="{DynamicResource GrayForeground}" FontFamily="{DynamicResource 7Digital}" FontSize="40" Content=":" VerticalAlignment="Center"  ></Label>
 
-                <TextBox TextChanged="Convert_TextChanged" x:Name="Second24" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">59</TextBox>
+                <TextBox CaretBrush="{DynamicResource GrayForeground}" Foreground="{DynamicResource GrayForeground}" TextChanged="Convert_TextChanged" x:Name="Second24" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" MaxLength="2" MaxLines="1" AcceptsReturn="False" AcceptsTab="False"  HorizontalContentAlignment="Center" FontFamily="{DynamicResource 7Digital}" FontSize="40" VerticalContentAlignment="Center">59</TextBox>
+                <Image Source="/Assets/Icons/base24.png" ></Image>
 
             </StackPanel>
         </StackPanel>
